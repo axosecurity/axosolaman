@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Axo Solaman</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f4f4f5; }
+        .grid-bg { background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <nav class="sticky top-0 z-50 border-b border-zinc-800/50 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                <span class="font-mono font-bold tracking-tighter uppercase">AXO<span class="text-emerald-500">SOLAMAN</span></span>
+            </a>
+            <div class="hidden md:flex gap-6">
+                <a href="about.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">About</a>
+                <a href="portfolio.html" class="text-emerald-500 border-b border-emerald-500 text-sm font-medium">Portfolio</a>
+                <a href="articles.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Articles</a>
+                <a href="youtube.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">YouTube</a>
+                <a href="thoughts.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Thoughts</a>
+                <a href="resources.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Resources</a>
+                <a href="contact.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="relative z-10 max-w-7xl mx-auto px-4 py-24">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="award" class="w-6 h-6 text-emerald-500"></i>
+                    <h2 class="text-3xl font-bold tracking-tight font-mono uppercase">Portfolio & Expertise</h2>
+                </div>
+                <p class="text-zinc-500">Showcasing my technical skills, research, and professional recognition.</p>
+            </div>
+            <a href="#" class="px-6 py-3 bg-zinc-800 text-white text-sm font-bold rounded-lg hover:bg-zinc-700 transition-all flex items-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+            </a>
+        </div>
+
+        <!-- Skills Grid -->
+        <section class="mb-24">
+            <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-500 mb-8">Technical Arsenal</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-emerald-500/10 rounded-lg">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-emerald-500"></i>
+                        </div>
+                        <h4 class="font-bold">Web Security</h4>
+                    </div>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> OWASP Top 10</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> API Pentesting</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Auth Bypass Research</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Server-Side Attacks</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-emerald-500/10 rounded-lg">
+                            <i data-lucide="code-2" class="w-5 h-5 text-emerald-500"></i>
+                        </div>
+                        <h4 class="font-bold">Security Tooling</h4>
+                    </div>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Burp Suite Professional</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Python for Automation</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Nuclei Templating</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Custom Recon Frameworks</li>
+                    </ul>
+                </div>
+                <div class="p-6 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="p-2 bg-emerald-500/10 rounded-lg">
+                            <i data-lucide="terminal" class="w-5 h-5 text-emerald-500"></i>
+                        </div>
+                        <h4 class="font-bold">Infrastructure</h4>
+                    </div>
+                    <ul class="space-y-3 text-sm text-zinc-400">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Cloud Security (AWS/GCP)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Docker & Kubernetes</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Linux Hardening</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Network Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="mb-24">
+            <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-500 mb-8">Featured Projects</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden">
+                        <img src="https://picsum.photos/seed/security-tool/800/450" alt="AxoRecon" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold group-hover:text-emerald-400 transition-colors">AxoRecon Framework</h4>
+                            <a href="#" class="text-zinc-500 hover:text-white"><i data-lucide="github" class="w-5 h-5"></i></a>
+                        </div>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            A modular reconnaissance framework built in Python that automates subdomain enumeration, port scanning, and visual inspection for bug bounty hunters.
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">Python</span>
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">Automation</span>
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">Open Source</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all">
+                    <div class="aspect-video bg-zinc-800 overflow-hidden">
+                        <img src="https://picsum.photos/seed/vulnerability/800/450" alt="Vulnerability Research" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-xl font-bold group-hover:text-emerald-400 transition-colors">Auth0 Bypass Research</h4>
+                            <a href="#" class="text-zinc-500 hover:text-white"><i data-lucide="external-link" class="w-5 h-5"></i></a>
+                        </div>
+                        <p class="text-zinc-400 text-sm mb-6 leading-relaxed">
+                            In-depth research into OAuth2 implementation flaws leading to account takeover. Presented at local security meetups and published as a whitepaper.
+                        </p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">Research</span>
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">OAuth2</span>
+                            <span class="text-[10px] font-mono px-2 py-1 bg-zinc-800 text-zinc-400 rounded">Critical</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platforms & Hall of Fame -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="globe" class="w-5 h-5 text-emerald-500"></i> Bug Bounty Platforms
+                </h3>
+                <div class="space-y-4">
+                    <a href="https://hackerone.com/axosolaman?type=user" target="_blank" class="flex items-center justify-between p-4 bg-zinc-800/50 rounded-xl hover:bg-zinc-800 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                                <span class="text-black font-bold text-xs">H1</span>
+                            </div>
+                            <span class="font-medium">HackerOne Profile</span>
+                        </div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-zinc-500 group-hover:text-emerald-500 transition-colors"></i>
+                    </a>
+                    <a href="#" class="flex items-center justify-between p-4 bg-zinc-800/50 rounded-xl hover:bg-zinc-800 transition-colors group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 bg-[#F15A24] rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-xs">BC</span>
+                            </div>
+                            <span class="font-medium">Bugcrowd Profile</span>
+                        </div>
+                        <i data-lucide="external-link" class="w-4 h-4 text-zinc-500 group-hover:text-emerald-500 transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="p-8 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="award" class="w-5 h-5 text-emerald-500"></i> Hall of Fame
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-zinc-800/30 border border-zinc-800 rounded-xl flex flex-col items-center gap-2 hover:border-emerald-500/30 transition-colors">
+                        <i data-lucide="chrome" class="w-6 h-6 text-zinc-500"></i>
+                        <span class="text-xs font-mono text-zinc-400">Google</span>
+                    </div>
+                    <div class="p-4 bg-zinc-800/30 border border-zinc-800 rounded-xl flex flex-col items-center gap-2 hover:border-emerald-500/30 transition-colors">
+                        <i data-lucide="component" class="w-6 h-6 text-zinc-500"></i>
+                        <span class="text-xs font-mono text-zinc-400">Microsoft</span>
+                    </div>
+                    <div class="p-4 bg-zinc-800/30 border border-zinc-800 rounded-xl flex flex-col items-center gap-2 hover:border-emerald-500/30 transition-colors">
+                        <i data-lucide="twitter" class="w-6 h-6 text-zinc-500"></i>
+                        <span class="text-xs font-mono text-zinc-400">Twitter</span>
+                    </div>
+                    <div class="p-4 bg-zinc-800/30 border border-zinc-800 rounded-xl flex flex-col items-center gap-2 hover:border-emerald-500/30 transition-colors">
+                        <i data-lucide="car" class="w-6 h-6 text-zinc-500"></i>
+                        <span class="text-xs font-mono text-zinc-400">Uber</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-500 mb-8">Professional Certifications</h3>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-500 font-bold text-xs">OSCP</div>
+                    <div class="text-xs font-bold uppercase tracking-tighter">Offensive Security Certified Professional</div>
+                </div>
+                <div class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-500 font-bold text-xs">CEH</div>
+                    <div class="text-xs font-bold uppercase tracking-tighter">Certified Ethical Hacker</div>
+                </div>
+                <div class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-500 font-bold text-xs">eWPT</div>
+                    <div class="text-xs font-bold uppercase tracking-tighter">eLearnSecurity Web Pentester</div>
+                </div>
+                <div class="p-4 bg-zinc-900 border border-zinc-800 rounded-xl flex items-center gap-4">
+                    <div class="w-10 h-10 bg-emerald-500/10 rounded-lg flex items-center justify-center text-emerald-500 font-bold text-xs">BSC</div>
+                    <div class="text-xs font-bold uppercase tracking-tighter">B.Sc in Computer Science</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 z-50 p-3 bg-emerald-500 text-black rounded-full shadow-lg opacity-0 translate-y-10 transition-all hover:bg-emerald-400">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://axosolaman.github.io/index.html</loc>
+    <lastmod>2024-03-02</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://axosolaman.github.io/about.html</loc>
+    <lastmod>2024-03-02</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://axosolaman.github.io/articles.html</loc>
+    <lastmod>2024-03-02</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://axosolaman.github.io/thoughts/the-sun-looks-so-bright.html</loc>
+    <lastmod>2024-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://axosolaman.github.io/thoughts/silence-is-power.html</loc>
+    <lastmod>2024-03-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>

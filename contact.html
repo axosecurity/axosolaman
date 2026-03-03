@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Axo Solaman</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f4f4f5; }
+        .grid-bg { background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <nav class="sticky top-0 z-50 border-b border-zinc-800/50 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                <span class="font-mono font-bold tracking-tighter uppercase">AXO<span class="text-emerald-500">SOLAMAN</span></span>
+            </a>
+            <div class="hidden md:flex gap-6">
+                <a href="about.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">About</a>
+                <a href="portfolio.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Portfolio</a>
+                <a href="articles.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Articles</a>
+                <a href="youtube.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">YouTube</a>
+                <a href="thoughts.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Thoughts</a>
+                <a href="resources.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Resources</a>
+                <a href="contact.html" class="text-emerald-500 border-b border-emerald-500 text-sm font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="relative z-10 max-w-2xl mx-auto px-4 py-24 text-center">
+        <h2 class="text-3xl font-bold tracking-tight font-mono uppercase mb-4">Get In Touch</h2>
+        <p class="text-zinc-500 mb-12">Let's collaborate or just say hi.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl group relative overflow-hidden">
+                <h4 class="text-sm font-bold text-emerald-500 uppercase tracking-widest mb-4">Email</h4>
+                <p id="email-text" class="text-lg font-mono break-all mb-4">axosolaman@wearehackerone.com</p>
+                <button onclick="copyText('email-text', this)" class="flex items-center gap-2 text-xs font-mono text-zinc-500 hover:text-emerald-400 transition-colors">
+                    <i data-lucide="copy" class="w-3 h-3"></i> COPY EMAIL
+                </button>
+            </div>
+            <div class="p-8 bg-zinc-900 border border-zinc-800 rounded-2xl group relative overflow-hidden">
+                <h4 class="text-sm font-bold text-emerald-500 uppercase tracking-widest mb-4">PGP Key</h4>
+                <div class="flex flex-col gap-3">
+                    <button class="px-4 py-2 bg-zinc-800 rounded-lg text-xs font-mono hover:bg-zinc-700 transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="download" class="w-3 h-3"></i> Download Key
+                    </button>
+                    <button onclick="copyText('PGP_KEY_DATA', this)" class="px-4 py-2 border border-zinc-800 rounded-lg text-xs font-mono hover:border-emerald-500/50 transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="copy" class="w-3 h-3"></i> Copy Key Data
+                    </button>
+                </div>
+                <span id="PGP_KEY_DATA" class="hidden">-----BEGIN PGP PUBLIC KEY BLOCK----- ...</span>
+            </div>
+        </div>
+        <div class="flex justify-center gap-8 pt-12">
+            <a href="https://x.com/axo_solaman" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors flex flex-col items-center gap-2">
+                <i data-lucide="twitter" class="w-6 h-6"></i>
+                <span class="text-[10px] uppercase tracking-widest">Twitter</span>
+            </a>
+            <a href="https://github.com/axosolaman" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors flex flex-col items-center gap-2">
+                <i data-lucide="github" class="w-6 h-6"></i>
+                <span class="text-[10px] uppercase tracking-widest">Github</span>
+            </a>
+            <a href="https://youtube.com/@AxoSecurity" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors flex flex-col items-center gap-2">
+                <i data-lucide="youtube" class="w-6 h-6"></i>
+                <span class="text-[10px] uppercase tracking-widest">YouTube</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sulaiman-hossain-5409a4217/" target="_blank" class="text-zinc-400 hover:text-emerald-400 transition-colors flex flex-col items-center gap-2">
+                <i data-lucide="linkedin" class="w-6 h-6"></i>
+                <span class="text-[10px] uppercase tracking-widest">LinkedIn</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 z-50 p-3 bg-emerald-500 text-black rounded-full shadow-lg opacity-0 translate-y-10 transition-all hover:bg-emerald-400">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        function copyText(id, btn) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i data-lucide="check" class="w-3 h-3"></i> COPIED!';
+                btn.classList.add('text-emerald-500');
+                lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('text-emerald-500');
+                    lucide.createIcons();
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

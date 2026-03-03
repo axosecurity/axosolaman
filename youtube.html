@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube | Axo Solaman</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f4f4f5; }
+        .grid-bg { background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <nav class="sticky top-0 z-50 border-b border-zinc-800/50 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                <span class="font-mono font-bold tracking-tighter uppercase">AXO<span class="text-emerald-500">SOLAMAN</span></span>
+            </a>
+            <div class="hidden md:flex gap-6">
+                <a href="about.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">About</a>
+                <a href="portfolio.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Portfolio</a>
+                <a href="articles.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Articles</a>
+                <a href="youtube.html" class="text-emerald-500 border-b border-emerald-500 text-sm font-medium">YouTube</a>
+                <a href="thoughts.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Thoughts</a>
+                <a href="resources.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Resources</a>
+                <a href="contact.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main class="relative z-10 max-w-7xl mx-auto px-4 py-24">
+        <div class="flex items-center gap-3 mb-12">
+            <i data-lucide="youtube" class="w-6 h-6 text-emerald-500"></i>
+            <h2 class="text-3xl font-bold tracking-tight font-mono uppercase">AxoSecurity YouTube</h2>
+        </div>
+        <div class="aspect-video w-full bg-zinc-900 border border-zinc-800 rounded-2xl flex items-center justify-center group cursor-pointer overflow-hidden relative mb-12">
+            <img src="https://picsum.photos/seed/youtube/1280/720" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform">
+            <div class="relative z-10 text-center">
+                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500 transition-colors">
+                    <i data-lucide="play" class="w-10 h-10 text-white fill-current"></i>
+                </div>
+                <h3 class="text-2xl font-bold">Latest Video: Bug Bounty Methodology 2024</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 z-50 p-3 bg-emerald-500 text-black rounded-full shadow-lg opacity-0 translate-y-10 transition-all hover:bg-emerald-400">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

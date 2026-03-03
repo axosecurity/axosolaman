@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://axosolaman.github.io/sitemap.xml

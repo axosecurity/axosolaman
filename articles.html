@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Axo Solaman</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #f4f4f5; }
+        .grid-bg { background-image: linear-gradient(to right, #80808012 1px, transparent 1px), linear-gradient(to bottom, #80808012 1px, transparent 1px); background-size: 40px 40px; }
+    </style>
+</head>
+<body>
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-zinc-800/50 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                <span class="font-mono font-bold tracking-tighter uppercase">AXO<span class="text-emerald-500">SOLAMAN</span></span>
+            </a>
+            <div class="hidden md:flex gap-6">
+                <a href="about.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">About</a>
+                <a href="portfolio.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Portfolio</a>
+                <a href="articles.html" class="text-emerald-500 border-b border-emerald-500 text-sm font-medium">Articles</a>
+                <a href="youtube.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">YouTube</a>
+                <a href="thoughts.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Thoughts</a>
+                <a href="resources.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Resources</a>
+                <a href="contact.html" class="text-zinc-400 hover:text-emerald-400 text-sm font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 py-24">
+        <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <div class="flex items-center gap-3 mb-2">
+                    <i data-lucide="book-open" class="w-6 h-6 text-emerald-500"></i>
+                    <h2 class="text-3xl font-bold tracking-tight font-mono uppercase">Articles & Writeups</h2>
+                </div>
+                <p class="text-zinc-500">Technical insights, bug bounty writeups, and security research published on Medium.</p>
+            </div>
+            <div class="relative w-full md:w-72">
+                <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500"></i>
+                <input type="text" id="article-search" placeholder="Search articles..." class="w-full bg-zinc-900 border border-zinc-800 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-emerald-500/50 transition-colors">
+            </div>
+        </div>
+
+        <!-- Featured Article -->
+        <section class="mb-16">
+            <h3 class="text-xs font-bold uppercase tracking-[0.3em] text-emerald-500 mb-8">Featured Writeup</h3>
+            <div class="group relative bg-zinc-900/50 border border-zinc-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="aspect-video lg:aspect-auto bg-zinc-800 overflow-hidden">
+                        <img src="https://picsum.photos/seed/writeup-featured/1200/800" alt="Featured Article" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" referrerPolicy="no-referrer">
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[10px] font-mono font-bold rounded-full border border-emerald-500/20">CRITICAL VULNERABILITY</span>
+                            <span class="text-zinc-500 text-[10px] font-mono">12 MIN READ</span>
+                        </div>
+                        <h4 class="text-3xl font-bold mb-4 group-hover:text-emerald-400 transition-colors leading-tight">Zero-Click Account Takeover in Major E-commerce Platform</h4>
+                        <p class="text-zinc-400 mb-8 leading-relaxed">
+                            A deep dive into how I chained three low-severity bugs into a full account takeover without any user interaction. This research led to a $15,000 bounty and a Hall of Fame induction.
+                        </p>
+                        <div class="flex items-center gap-6">
+                            <a href="https://medium.com/@axosolaman/your-article-link" target="_blank" class="px-6 py-3 bg-emerald-500 text-black font-bold rounded-lg hover:bg-emerald-400 transition-all flex items-center gap-2">
+                                Read on Medium <i data-lucide="external-link" class="w-4 h-4"></i>
+                            </a>
+                            <div class="flex gap-3">
+                                <span class="text-[10px] font-mono text-zinc-500">#BugBounty</span>
+                                <span class="text-[10px] font-mono text-zinc-500">#WebSecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-2 mb-12" id="filter-container">
+            <button data-filter="all" class="filter-btn px-4 py-1.5 rounded-full text-xs font-mono bg-emerald-500 text-black font-bold">ALL</button>
+            <button data-filter="writeup" class="filter-btn px-4 py-1.5 rounded-full text-xs font-mono bg-zinc-800 text-zinc-400 hover:bg-zinc-700">WRITEUPS</button>
+            <button data-filter="guide" class="filter-btn px-4 py-1.5 rounded-full text-xs font-mono bg-zinc-800 text-zinc-400 hover:bg-zinc-700">GUIDES</button>
+            <button data-filter="philosophy" class="filter-btn px-4 py-1.5 rounded-full text-xs font-mono bg-zinc-800 text-zinc-400 hover:bg-zinc-700">PHILOSOPHY</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="article-grid">
+            <!-- Article 1 -->
+            <div class="article-card group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all flex flex-col" data-tags="writeup web security">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-2 bg-zinc-800 rounded-lg group-hover:bg-emerald-500/10">
+                        <i data-lucide="terminal" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-zinc-600">5 MIN READ</span>
+                </div>
+                <h3 class="text-lg font-bold mb-3 group-hover:text-emerald-400 transition-colors">Account Takeover via Password Reset</h3>
+                <p class="text-sm text-zinc-500 mb-6 flex-grow leading-relaxed">Full technical breakdown of a critical vulnerability involving token leakage and rate limit bypass.</p>
+                <div class="flex items-center justify-between mt-auto pt-6 border-t border-zinc-800/50">
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Writeup</span>
+                    </div>
+                    <a href="#" target="_blank" class="text-[10px] font-mono text-emerald-500 hover:text-emerald-400 flex items-center gap-1">
+                        MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="article-card group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all flex flex-col" data-tags="guide security">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-2 bg-zinc-800 rounded-lg group-hover:bg-emerald-500/10">
+                        <i data-lucide="book-open" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-zinc-600">8 MIN READ</span>
+                </div>
+                <h3 class="text-lg font-bold mb-3 group-hover:text-emerald-400 transition-colors">The Ultimate Rate Limiting Guide</h3>
+                <p class="text-sm text-zinc-500 mb-6 flex-grow leading-relaxed">Everything you need to know about testing and bypassing rate limits in modern web applications.</p>
+                <div class="flex items-center justify-between mt-auto pt-6 border-t border-zinc-800/50">
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Guide</span>
+                    </div>
+                    <a href="#" target="_blank" class="text-[10px] font-mono text-emerald-500 hover:text-emerald-400 flex items-center gap-1">
+                        MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="article-card group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all flex flex-col" data-tags="philosophy">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="p-2 bg-zinc-800 rounded-lg group-hover:bg-emerald-500/10">
+                        <i data-lucide="sun" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <span class="text-[10px] font-mono text-zinc-600">3 MIN READ</span>
+                </div>
+                <h3 class="text-lg font-bold mb-3 group-hover:text-emerald-400 transition-colors">The Brightness of the Sun</h3>
+                <p class="text-sm text-zinc-500 mb-6 flex-grow leading-relaxed">A philosophical exploration of external appearances versus internal realities.</p>
+                <div class="flex items-center justify-between mt-auto pt-6 border-t border-zinc-800/50">
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Philosophy</span>
+                    </div>
+                    <a href="#" target="_blank" class="text-[10px] font-mono text-emerald-500 hover:text-emerald-400 flex items-center gap-1">
+                        MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 z-50 p-3 bg-emerald-500 text-black rounded-full shadow-lg opacity-0 translate-y-10 transition-all hover:bg-emerald-400">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        lucide.createIcons();
+
+        // Search and Filter Logic
+        const searchInput = document.getElementById('article-search');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articleCards = document.querySelectorAll('.article-card');
+
+        function filterArticles() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.bg-emerald-500').dataset.filter;
+
+            articleCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const tags = card.dataset.tags.toLowerCase();
+                const matchesSearch = title.includes(searchTerm) || tags.includes(searchTerm);
+                const matchesFilter = activeFilter === 'all' || tags.includes(activeFilter);
+
+                if (matchesSearch && matchesFilter) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterArticles);
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-emerald-500', 'text-black', 'font-bold');
+                    b.classList.add('bg-zinc-800', 'text-zinc-400');
+                });
+                btn.classList.add('bg-emerald-500', 'text-black', 'font-bold');
+                btn.classList.remove('bg-zinc-800', 'text-zinc-400');
+                filterArticles();
+            });
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

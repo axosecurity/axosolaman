@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axo Solaman | Cybersecurity Researcher & Content Creator</title>
+    <meta name="description" content="Personal authority website for Sulaiman Hossain Sefat (Axo Solaman). Security Researcher, Bug Bounty Hunter, Great Dreamer, and Founder of AxoSecurity.">
+    
+    <!-- Tailwind CSS 4 CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+        body {
+            font-family: var(--font-sans);
+            background-color: #0a0a0a;
+            color: #f4f4f5;
+        }
+        .font-mono { font-family: var(--font-mono); }
+        .grid-bg {
+            background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+                              linear-gradient(to bottom, #80808012 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .radial-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+        }
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #10b981;
+        }
+        .active-nav {
+            color: #10b981;
+            border-bottom: 1px solid #10b981;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Background Effects -->
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="fixed inset-0 radial-glow pointer-events-none"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 border-b border-zinc-800/50 bg-black/50 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="p-1.5 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                            <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                        </div>
+                        <span class="font-mono font-bold tracking-tighter text-lg uppercase">
+                            AXO<span class="text-emerald-500">SOLAMAN</span>
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-6">
+                    <a href="about.html" class="nav-link text-sm font-medium text-zinc-400">About</a>
+                    <a href="portfolio.html" class="nav-link text-sm font-medium text-zinc-400">Portfolio</a>
+                    <a href="articles.html" class="nav-link text-sm font-medium text-zinc-400">Articles</a>
+                    <a href="youtube.html" class="nav-link text-sm font-medium text-zinc-400">YouTube</a>
+                    <a href="thoughts.html" class="nav-link text-sm font-medium text-zinc-400">Thoughts</a>
+                    <a href="resources.html" class="nav-link text-sm font-medium text-zinc-400">Resources</a>
+                    <a href="contact.html" class="nav-link text-sm font-medium text-zinc-400">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 text-zinc-400">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-black/95 px-4 py-6 space-y-4">
+            <a href="about.html" class="block text-zinc-400 hover:text-emerald-400">About</a>
+            <a href="portfolio.html" class="block text-zinc-400 hover:text-emerald-400">Portfolio</a>
+            <a href="articles.html" class="block text-zinc-400 hover:text-emerald-400">Articles</a>
+            <a href="youtube.html" class="block text-zinc-400 hover:text-emerald-400">YouTube</a>
+            <a href="thoughts.html" class="block text-zinc-400 hover:text-emerald-400">Thoughts</a>
+            <a href="resources.html" class="block text-zinc-400 hover:text-emerald-400">Resources</a>
+            <a href="contact.html" class="block text-zinc-400 hover:text-emerald-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-500 text-xs font-mono mb-8">
+                <i data-lucide="zap" class="w-3 h-3"></i>
+                <span>SECURITY RESEARCHER & CONTENT CREATOR</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
+                SULAIMAN <br>
+                <span class="text-emerald-500">HOSSAIN SEFAT</span>
+            </h1>
+            <p class="text-xl text-zinc-400 max-w-2xl mb-10 leading-relaxed">
+                Alias <span class="text-zinc-100 font-mono">Axo Solaman</span>. I break things to make them stronger. 
+                A security researcher, entrepreneur, and great dreamer specializing in web security and bug bounty. 
+                Through <span class="text-emerald-500">AxoSecurity</span>, I share knowledge to fight ignorance and build a sovereign future.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="articles.html" class="px-8 py-4 bg-emerald-500 text-black font-bold rounded-lg hover:bg-emerald-400 transition-all flex items-center gap-2">
+                    Read Articles <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="portfolio.html" class="px-8 py-4 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-all">
+                    My Portfolio
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-32">
+            <div class="p-6 border-l border-zinc-800">
+                <div class="text-3xl font-bold font-mono text-emerald-500 mb-1">100+</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-500">Bugs Found</div>
+            </div>
+            <div class="p-6 border-l border-zinc-800">
+                <div class="text-3xl font-bold font-mono text-emerald-500 mb-1">1K+</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-500">YouTube Subs</div>
+            </div>
+            <div class="p-6 border-l border-zinc-800">
+                <div class="text-3xl font-bold font-mono text-emerald-500 mb-1">5+</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-500">Articles</div>
+            </div>
+            <div class="p-6 border-l border-zinc-800">
+                <div class="text-3xl font-bold font-mono text-emerald-500 mb-1">12</div>
+                <div class="text-xs uppercase tracking-widest text-zinc-500">Hall of Fame</div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="mt-32">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight font-mono uppercase mb-2">Recent Articles</h2>
+                    <p class="text-zinc-500">Technical writeups and cybersecurity insights.</p>
+                </div>
+                <a href="articles.html" class="text-emerald-500 hover:text-emerald-400 text-sm font-mono flex items-center gap-2">
+                    View All <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all">
+                    <div class="p-2 bg-zinc-800 rounded-lg w-fit mb-4 group-hover:bg-emerald-500/10">
+                        <i data-lucide="shield" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400">Account Takeover via Password Reset</h3>
+                    <p class="text-sm text-zinc-500 mb-4">How I bypassed rate limiting and token validation to take over accounts.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Writeup</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Critical</span>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all">
+                    <div class="p-2 bg-zinc-800 rounded-lg w-fit mb-4 group-hover:bg-emerald-500/10">
+                        <i data-lucide="book-open" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400">The Ultimate Rate Limiting Guide</h3>
+                    <p class="text-sm text-zinc-500 mb-4">Everything you need to know about testing rate limits in 2024.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Guide</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Security</span>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group p-6 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all">
+                    <div class="p-2 bg-zinc-800 rounded-lg w-fit mb-4 group-hover:bg-emerald-500/10">
+                        <i data-lucide="quote" class="w-5 h-5 text-zinc-400 group-hover:text-emerald-500"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2 group-hover:text-emerald-400">The sun looks so bright...</h3>
+                    <p class="text-sm text-zinc-500 mb-4">"The sun looks so bright, but you don't know what is happening inside."</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 bg-zinc-800 text-zinc-400 rounded">Philosophy</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recent Thoughts -->
+        <section class="mt-32">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight font-mono uppercase mb-2">Recent Thoughts</h2>
+                    <p class="text-zinc-500">Philosophical reflections and original theories.</p>
+                </div>
+                <a href="thoughts.html" class="text-emerald-500 hover:text-emerald-400 text-sm font-mono flex items-center gap-2">
+                    View All <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 gap-12">
+                <!-- Quote: South Asia Dream -->
+                <div class="group relative h-80 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://picsum.photos/seed/south-asia/1600/900?blur=1" alt="South Asia Dream" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer">
+                    <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center p-8">
+                        <i data-lucide="quote" class="w-10 h-10 text-emerald-500/30 mb-4"></i>
+                        <h2 class="text-xl md:text-3xl font-bold text-white tracking-tighter leading-tight mb-4 max-w-3xl">
+                            "I am a great dreamer; among all of my dreams, one is South Asia: The land of peace, justice, and equality."
+                        </h2>
+                        <div class="w-16 h-1 bg-emerald-500 mb-4"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-[0.4em] font-bold">- Axosolaman</span>
+                            <div class="flex gap-4">
+                                <a href="thoughts/south-asia-dream.html" class="px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    SUMMARY <i data-lucide="file-text" class="w-3 h-3"></i>
+                                </a>
+                                <a href="https://medium.com/@axosolaman/your-article-link" target="_blank" class="px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/40 border border-emerald-500/30 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote: Ignorance -->
+                <div class="group relative h-80 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://picsum.photos/seed/willpower/1600/900?blur=1" alt="Willpower and Knowledge" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer">
+                    <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center p-8">
+                        <i data-lucide="quote" class="w-10 h-10 text-emerald-500/30 mb-4"></i>
+                        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tighter leading-tight mb-4 max-w-3xl">
+                            "Ignorance and the absence of will are the root causes of all problems"
+                        </h2>
+                        <div class="w-16 h-1 bg-emerald-500 mb-4"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-[0.4em] font-bold">- Axosolaman</span>
+                            <div class="flex gap-4">
+                                <a href="thoughts/ignorance-and-absence-of-will.html" class="px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    SUMMARY <i data-lucide="file-text" class="w-3 h-3"></i>
+                                </a>
+                                <a href="https://medium.com/@axosolaman/your-article-link" target="_blank" class="px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/40 border border-emerald-500/30 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote: Sun -->
+                <div class="group relative h-80 rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://picsum.photos/seed/sun/1600/900?blur=1" alt="The Sun" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" referrerPolicy="no-referrer">
+                    <div class="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center p-8">
+                        <i data-lucide="quote" class="w-10 h-10 text-emerald-500/30 mb-4"></i>
+                        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tighter leading-tight mb-4 max-w-3xl">
+                            "The sun looks so bright, but you don't know what is happening inside."
+                        </h2>
+                        <div class="w-16 h-1 bg-emerald-500 mb-4"></div>
+                        <div class="flex flex-col items-center gap-4">
+                            <span class="text-xs font-mono text-emerald-400 uppercase tracking-[0.4em] font-bold">- Axosolaman</span>
+                            <div class="flex gap-4">
+                                <a href="thoughts/the-sun-looks-so-bright.html" class="px-4 py-2 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    SUMMARY <i data-lucide="file-text" class="w-3 h-3"></i>
+                                </a>
+                                <a href="https://medium.com/@axosolaman/your-article-link" target="_blank" class="px-4 py-2 bg-emerald-500/20 hover:bg-emerald-500/40 border border-emerald-500/30 backdrop-blur-md rounded-full text-[10px] font-mono text-white uppercase tracking-widest flex items-center gap-2 transition-all">
+                                    MEDIUM <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 z-50 p-3 bg-emerald-500 text-black rounded-full shadow-lg opacity-0 translate-y-10 transition-all hover:bg-emerald-400">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="relative z-10 border-t border-zinc-800/50 bg-black/50 py-12 mt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="shield" class="w-5 h-5 text-emerald-500"></i>
+                        <span class="font-mono font-bold tracking-tighter uppercase">AXO SOLAMAN</span>
+                    </div>
+                    <p class="text-sm text-zinc-500 leading-relaxed">
+                        Security Researcher & Bug Bounty Hunter. Exploring the depths of cyber space and human philosophy.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-zinc-500">
+                        <li><a href="articles.html" class="hover:text-emerald-400 transition-colors">Articles</a></li>
+                        <li><a href="portfolio.html" class="hover:text-emerald-400 transition-colors">Portfolio</a></li>
+                        <li><a href="thoughts.html" class="hover:text-emerald-400 transition-colors">Thoughts</a></li>
+                        <li><a href="youtube.html" class="hover:text-emerald-400 transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">Social</h4>
+                    <div class="flex gap-4">
+                        <a href="https://x.com/axo_solaman" target="_blank" class="text-zinc-500 hover:text-emerald-400 transition-colors"><i data-lucide="twitter"></i></a>
+                        <a href="https://github.com/axosolaman" target="_blank" class="text-zinc-500 hover:text-emerald-400 transition-colors"><i data-lucide="github"></i></a>
+                        <a href="https://youtube.com/@AxoSecurity" target="_blank" class="text-zinc-500 hover:text-emerald-400 transition-colors"><i data-lucide="youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/sulaiman-hossain-5409a4217/" target="_blank" class="text-zinc-500 hover:text-emerald-400 transition-colors"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">Status</h4>
+                    <div class="flex items-center gap-2 text-sm text-zinc-500">
+                        <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+                        <span>Available for collaborations</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-zinc-800/50 text-center text-xs text-zinc-600">
+                © <span id="year"></span> Sulaiman Hossain Sefat. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Set Current Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll to Top
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
